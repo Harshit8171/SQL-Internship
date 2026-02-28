@@ -1,0 +1,32 @@
+-- Day 1 SQL Basics
+-- Internship Practice by Harshit Gaur
+
+CREATE DATABASE CompanyDB;
+USE CompanyDB;
+
+CREATE TABLE Employees (
+    EmpID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Department VARCHAR(50),
+    Salary INT,
+    City VARCHAR(50)
+);
+
+INSERT INTO Employees VALUES
+(1, 'Amit', 'IT', 50000, 'Delhi'),
+(2, 'Rahul', 'HR', 40000, 'Noida'),
+(3, 'Priya', 'IT', 60000, 'Delhi'),
+(4, 'Neha', 'Finance', 55000, 'Mumbai'),
+(5, 'Arjun', 'HR', 45000, 'Noida'),
+(6, 'Simran', 'IT', 70000, 'Delhi');
+
+SELECT * FROM Employees;
+SELECT * FROM Employees WHERE Department = 'IT';
+SELECT * FROM Employees WHERE Salary > 50000;
+SELECT * FROM Employees WHERE City = 'Delhi';
+SELECT * FROM Employees WHERE Salary < 45000;
+SELECT Name, Salary FROM Employees WHERE Department = 'HR';
+SELECT Name FROM Employees WHERE City = 'Noida';
+SELECT * FROM Employees WHERE Salary = 60000;
+SELECT Name, Department FROM Employees;
+SELECT * FROM Employees WHERE EmpID = 3;
